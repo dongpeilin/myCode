@@ -2,5 +2,18 @@
     height: 32px;
     background: #f2f2f2;
     font-size: 12px;
-    line-height; 32px;
+    line-height: 32px;
+}
+
+#quick-menu{
+    float: right;
+}
+
+.menu-triangle{
+    float: left;
+}
+
+#lefthead{
+    width: 500px;
+    margin: 0px;
 }

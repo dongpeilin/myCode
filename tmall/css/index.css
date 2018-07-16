@@ -92,3 +92,58 @@
     color: #fff;
 }
 
+#side-bar{
+    width: 35px;
+    background: #ff0000;
+    position:fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.side-bar-tab{
+    background: #000;
+    width: 20px;
+    height: 120px;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#side-bar .vip{
+    width: 90px;
+    height: 35px;
+    background: aqua;
+    position: absolute;
+    top: 50px;
+    left: -200px;
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+#side-bar .vip::after{
+    content: '';
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent transparent transparent aqua;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    margin-top: -4px;
+}
+
+#side-bar .side-bar-tab:hover. vip{
+    opacity: 1;
+    right: -90px;
+    background: #ffff00;
+}
+
+#category-type .product-type>li{
+    background: #ff0036;
+    padding-left: -30px;
+}
+
+
+

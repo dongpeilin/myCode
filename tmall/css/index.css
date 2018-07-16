@@ -83,11 +83,6 @@
     height: 536px;
 }
 
-#category-type>li{
-    height: 36px;
-    line-height: 36px;
-    margin-left: 30px;
-}
 #category-type>li>a{
     color: #fff;
 }
@@ -117,7 +112,7 @@
     position: absolute;
     top: 50px;
     left: -200px;
-    opacity: 1;
+    opacity: 0;
     transition: all .5s ease;
 }
 
@@ -134,16 +129,74 @@
     margin-top: -4px;
 }
 
-#side-bar .side-bar-tab:hover. vip{
+#side-bar .side-bar-tab:hover .vip{
     opacity: 1;
-    right: -90px;
+    left: -90px;
     background: #ffff00;
 }
 
-#category-type .product-type>li{
+#category-type .product-type{
     background: #ff0036;
-    padding-left: -30px;
 }
 
+#category-type .nvzhuang {
+    width: 170px;
+    height: 36px;
+    padding-right: 20px;
+    line-height: 36px;
+    position: relative;
+    background: #ed3833;
+}
 
+#category-type>li{
+    height: 36px;
+    width: 190px;
+    padding-left: 10px;
+}
 
+.brand{
+    width: 100%;
+    height: 100%;
+    background: #ff0000;
+
+}
+
+#brand-list{
+    position: relative;
+}
+
+.coupon{
+    padding-top: 25px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.enter{
+    margin: 0 auto;
+    background: #333333 ;
+    border-radius: 9px;
+    width: 63px;
+    height: 18px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 8px;
+}
+#brand-mast{
+    height: 108px;
+    width: 122px;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#trademark{
+    height: 108px;
+    width: 122px;
+}
+
+.brand:hover #brand-mast{
+    opacity: 1;
+    cursor: pointer;
+
+}

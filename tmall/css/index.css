@@ -200,3 +200,48 @@
     cursor: pointer;
 
 }
+
+#select{
+    height: 130px;
+    width: 1400px;
+}
+
+#select img{
+    width: 240px;
+    float: left;
+}
+
+#search-box{
+    float: left;
+    border: 2px solid #FF0036;
+    width: 625px;
+    height: 36px;
+    margin-left: 50px;
+    margin-top: 38px;
+}
+
+.search-ipt{
+    width: 493px;
+    height: 36px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    text-indent: 10px;
+    float: left;
+}
+
+.search-btn{
+    width: 132px;
+    height: 36px;
+    border: none;
+    background: #FF0036;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    float: left;
+}
+
+#hot-query li{
+    float: left;
+}

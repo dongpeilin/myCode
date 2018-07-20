@@ -4,31 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        #div1{
-            position: relative;
-            width: 200px;
-            height: 200px;
-            border:1px dashed;
-            perspective: ;
 
-        }
-        #div2{
-            width: 150px;
-            height: 150px;
-            background: #00ff00;
-            float: left;
-            margin-top: 50%;
-            margin-left: 50%;
-            position: absolute;
-            top: -75px;
-            left: -75px;
-            transform:translateZ(20px);
-        }
     </style>
 </head>
 <body>
-<div id="div1"><div id="div2">
-
-</div></div>
+<!--求所有满足条件的四位数ABCD，它是13的倍数，且第3位数加上第2位数等于第4位数（即：A=B+C）。-->
+<!--（提示：对于四位数的整数x，通过Math.floor(x/1000)可求出第4位的数字，其他位数的提取也类似） -->
+<script>
+    // 在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。
+    var j=0;
+    for (var i=100;i<=1000;i++){
+        if (i%1==0&&i%i==0){
+            document.write(i);
+            document.write("&nbsp");
+            j++;
+        }
+        if (j%6==0){
+            document.write("<br/>");
+        }
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #container{
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+            position: relative;
+        }
+        #imgs img{
+            display: none;
+        }
+        #imgs .selected{
+            display: block;
+        }
+        #nav{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        #nav li,#arrows span{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #cccccc;
+            list-style: none;
+            margin-left: 5px;
+            line-height: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #arrows{
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+        #nav .nav-selected{
+            background: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="imgs">
+            <img src="imgs/1.jpg" alt="" class="selected">
+            <img src="imgs/2.jpg" alt="" class="">
+            <img src="imgs/3.jpg" alt="" class="">
+            <img src="imgs/4.jpg" alt="" class="">
+        </div>
+        <ul id="nav">
+            <li class="nav-selected">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div id="arrows">
+            <span id="prev">&lt;</span>
+            <span id="next">&gt;</span>
+        </div>
+    </div>
+<script>
+    var oImgs=document.getElementById('imgs');//选择元素错误，要仔细
+    var oImg=oImgs.getElementsByTagName('img');
+    var oNav=document.getElementById('nav');
+    var ali=oNav.getElementsByTagName('li');
+    var iNowIndex=0;
+    var oPrev=document.getElementById('prev');
+    var oNext=document.getElementById('next');
+    for (var i=0;i<ali.length;i++) {
+        ali[i].index=i;
+        ali[i].onmouseover = function () {
+            iNowIndex=this.index;
+            changeimg();
+        }
+    }
+    oPrev.onclick=function () {
+        iNowIndex--;
+        if(iNowIndex<0){
+            iNowIndex=3;
+        }
+        changeimg();
+    }
+    oNext.onclick=function () {
+        iNowIndex++;
+        if(iNowIndex>3){
+            iNowIndex=0;
+        }
+        changeimg();
+    }
+    function changeimg(){
+        for (var x= 0; x < ali.length; x++) {
+            ali[x].className='';
+            oImg[x].className='';
+        }
+        ali[iNowIndex].className = 'nav-selected';
+        oImg[iNowIndex].className='selected';
+    }
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            border: 0px;
+        }
+        #big{
+            overflow: hidden;
+        }
+        #small,#big{
+            float: left;
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        #drag{
+            width: 150px;
+            height: 150px;
+            background: #ffffff;
+            opacity: .3;
+            position: absolute;
+            display: none;
+        }
+        #big img{
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="small">
+            <img src="imgs/5.jpg" alt="">
+            <div id="drag"></div>
+        </div>
+        <div id="big">
+            <img src="imgs/6.jpg" alt="" id="big-img">
+        </div>
+    </div>
+    <script>
+        var oSmall=document.getElementById('small');
+        var oDrag=document.getElementById('drag');
+        var oBig=document.getElementById('big');
+        var iBigImg=document.getElementById('big-img');
+        oSmall.onmouseover= function(){
+            oDrag.style.display='block';
+            iBigImg.style.display='block';
+        }
+        //设置odrag的位置,先将限制做好再将值给oDrag
+        oSmall.onmousemove=function(ev){
+            ev = ev || window.event;
+            //top和left记录的是当前鼠标的位置，都是用他做比较
+            var left = ev.clientX - oDrag.offsetWidth / 2;
+            var top = ev.clientY - oDrag.offsetHeight / 2;
+            if(left<0){
+                left=0;
+            }
+            if(top<0){
+                top=0;
+            }
+            var leftmax= oSmall.offsetWidth-oDrag.offsetWidth;
+            var topmax= oSmall.offsetHeight-oDrag.offsetHeight;
+            //if中的判断条件要看清！
+            if(left>leftmax){
+                left=leftmax;
+            }
+            if(top>topmax){
+                top=topmax;
+            }
+            oDrag.style.left=left + 'px';
+            oDrag.style.top=top + 'px';
+            //用当前位置除以最大位置得出移动百分比
+            dragx=left/leftmax;
+            dragy=top/topmax;
+            var bigleft=dragx*(iBigImg.offsetWidth-oBig.offsetWidth)*-1;
+            var bigtop=dragy*(iBigImg.offsetHeight-oBig.offsetHeight)*-1;
+            iBigImg.style.left=bigleft+'px';
+            iBigImg.style.top=bigtop+'px';
+        }
+
+        oSmall.onmouseleave=function(){
+            oDrag.style.display='none';
+            iBigImg.style.display='none';
+        }
+
+    </script>
+</body>
+</html>

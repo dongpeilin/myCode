@@ -4,35 +4,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
-        }
-        #menu{
-            height: 155px;
-            width: 120px;
-            border: solid 1px #000000 ;
-            display: none;
-        }
-        #menu li:last-child{
-            border-bottom: none;
-        }
-        #menu li{
-            height: 30px;
-            width: 120px;
-            border-bottom: 1px dashed;
-            list-style: none;
-            line-height: 30px;
-            text-align: center;
-        }
-        #menu li:hover{
-            background: #cccccc;
-            cursor: pointer;
-        }
+        /**{*/
+            /*margin: 0px;*/
+            /*padding: 0px;*/
+        /*}*/
+        /*#menu{*/
+            /*height: 155px;*/
+            /*width: 120px;*/
+            /*border: solid 1px #000000 ;*/
+            /*display: none;*/
+            /*position: absolute;*/
+        /*}*/
+        /*#menu li:last-child{*/
+            /*border-bottom: none;*/
+        /*}*/
+        /*#menu li{*/
+            /*height: 30px;*/
+            /*width: 120px;*/
+            /*border-bottom: 1px dashed;*/
+            /*list-style: none;*/
+            /*line-height: 30px;*/
+            /*text-align: center;*/
+        /*}*/
+        /*#menu li:hover{*/
+            /*background: #cccccc;*/
+            /*cursor: pointer;*/
+        /*}*/
     </style>
 </head>
 <body>
-
 <ul id="menu">
     <li>菜单1</li>
     <li>菜单2</li>
@@ -43,12 +43,23 @@
 <script>
     var oMenu=document.getElementById('menu');
     var aLi=oMenu.getElementsByTagName('li');
-    document.oncontextmenu=function () {
+    document.oncontextmenu=function (ev) {
         oMenu.style.display='block';
-        oMenu.style.left=clientX+'px';
-        oMenu.style.top=clientY+'px';
+        oMenu.style.left=ev.clientX+'px';
+        oMenu.style.top=ev.clientY+'px';
         return false;
     }
+    document.onclick=function(){
+        oMenu.style.display='none';
+    }
+    for (var i=0;i<aLi.length;i++){
+        aLi[i].onclick=function(){
+           alert(this.innerHTML);
+        }
+    }
+</script>
+<script>
+
 </script>
 </body>
 </html>

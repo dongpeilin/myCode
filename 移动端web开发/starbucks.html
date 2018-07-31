@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        html{
+            font-size: 12px;
+            -webkit-tap-highlight-color: transparent;
+            height: 100%;
+        }
+        #left{
+            width: 30%;
+            height: 100%;
+            position: fixed;
+            background: #ff00ff;
+            overflow: hidden;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #list{
+            width: 100%;
+            height: 96px;
+            background: #ff0000;
+            position: relative;
+        }
+        #list>ul{
+            padding: 24px;
+        }
+        #list li{
+            font-size: 1.4rem;
+            list-style: none;
+            float: left;
+            height: 46px;
+            padding: 5px 10px;
+        }
+        #logo .img1{
+            width: 36px;
+            height: 36px;
+
+        }
+        #list .logo{
+            padding: 0px 10px 0px 0px;
+        }
+        #list #more{
+            float: right;
+        }
+        #left-user{
+            background: #ffffff;
+            height: calc(100% - 96px);
+            display: table;
+        }
+        #left-user .left-user-c{
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: #ffff00;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 24px 0 84px;
+        }
+        #div2{
+            padding-bottom: 24px;
+        }
+        #login{
+            border: 1px solid #00A862;
+            color: #00A862;
+            font-weight: 500;
+            border-radius: 48px;
+            width: 90px;
+            height: 50px;
+        }
+        #div1{
+            width: 227px;
+            height: 38px;
+            font-size: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="left">
+        <div id="list">
+            <ul>
+                <li class="logo"><a href="" id="logo"><img src="logo.svg" alt="" class="img1"></a></li>
+                <li>门店</li>
+                <li>我的账户</li>
+                <li>菜单</li>
+                <li id="more"><a href=""><img src="icon-hamburger.svg" alt=""></a></li>
+            </ul>
+        </div>
+        <div id="left-user">
+            <div class="left-user-c">
+                <div id="div2"><span>心情惬意，来杯咖啡吧☕</span></div>
+                <div id="div1">
+                    <a href="">12</a>
+                    <a href="" id="login">注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

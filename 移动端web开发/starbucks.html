@@ -8,99 +8,182 @@
             text-decoration: none;
         }
         html{
-            font-size: 12px;
+            font-size: 62.5% !important;
             -webkit-tap-highlight-color: transparent;
             height: 100%;
         }
-        #left{
+        .nav{
             width: 30%;
             height: 100%;
             position: fixed;
-            background: #ff00ff;
-            overflow: hidden;
         }
         *{
             margin: 0px;
             padding: 0px;
         }
-        #list{
-            width: 100%;
-            height: 96px;
-            background: #ff0000;
+        .list{
+            width: calc(100% - 48px);
+            height: 48px;
             position: relative;
-        }
-        #list>ul{
             padding: 24px;
+            background: #cccccc;
+
         }
-        #list li{
-            font-size: 1.4rem;
+        .list li{
+            font-size: 1.6rem;
             list-style: none;
             float: left;
             height: 46px;
             padding: 5px 10px;
         }
-        #logo .img1{
+        .logo img{
             width: 36px;
             height: 36px;
-
-        }
-        #list .logo{
+            float: left;
             padding: 0px 10px 0px 0px;
         }
-        #list #more{
+        .more img{
             float: right;
+            padding: 5px 0px;
         }
-        #left-user{
+        .close img{
+            float: right;
+            padding: 5px 0px;
+        }
+        /*.list .more{*/
+            /*!*float: right;*!*/
+        /*}*/
+        .list a{
+            color: #000000;
+        }
+        .left-user{
             background: #ffffff;
             height: calc(100% - 96px);
             display: table;
+            position: relative;
         }
-        #left-user .left-user-c{
-            font-size: 2.2rem;
-            font-weight: 700;
-            background: #ffff00;
+        .left-user .left-user-c{
             display: table-cell;
             vertical-align: middle;
             padding: 0 24px 0 84px;
         }
         #div2{
-            padding-bottom: 24px;
+            margin-bottom: 24px;
         }
-        #login{
+        #div2 span{
+            font-size: 2.6rem;
+        }
+        .div1 img{
+            float: left;
+            margin-top: 0px;
+        }
+        .login{
+            color: #00A862;
+            padding: 3px 13px 3px 0px;
+            float: left;
+        }
+        .register{
             border: 1px solid #00A862;
             color: #00A862;
             font-weight: 500;
             border-radius: 48px;
-            width: 90px;
-            height: 50px;
+            padding: 3px 13px;
+            float: left;
+            margin: 0px 10px;
         }
-        #div1{
+        .div1{
             width: 227px;
             height: 38px;
             font-size: 1.4rem;
+        }
+        #list2 li{
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 120%;
+            list-style: none;
+        }
+        .overlay{
+            opacity: 0;
+            visibility: hidden;
+        }
+        .swich{
+            opacity: 1;
+            visibility: visible;
         }
     </style>
 </head>
 <body>
     <div id="left">
-        <div id="list">
-            <ul>
-                <li class="logo"><a href="" id="logo"><img src="logo.svg" alt="" class="img1"></a></li>
-                <li>门店</li>
-                <li>我的账户</li>
-                <li>菜单</li>
-                <li id="more"><a href=""><img src="icon-hamburger.svg" alt=""></a></li>
-            </ul>
+        <div class="nav">
+            <div class="list">
+                <a href="" class="logo"><img src="logo.svg" alt=""></a>
+                <ul>
+                    <li><a href="">门店</a></li>
+                    <li><a href="">我的账户</a></li>
+                    <li><a href="">菜单</a></li>
+                </ul>
+                <a href="" class="more"><img src="icon-hamburger.svg" alt=""></a>
+            </div>
+            <div class="left-user">
+                <div class="left-user-c">
+                    <div id="div2"><span>心情惬意，来杯咖啡吧☕</span></div>
+                    <div class="div1">
+                        <a href="">
+                            <img src="icon-account.svg" alt="">
+                            <span class="login">登陆</span>
+                        </a>
+                        <a href="" class="register">注册</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="left-user">
-            <div class="left-user-c">
-                <div id="div2"><span>心情惬意，来杯咖啡吧☕</span></div>
-                <div id="div1">
-                    <a href="">12</a>
-                    <a href="" id="login">注册</a>
+        <!--这是点击按钮后的左边-->
+        <div class=" nav overlay">
+            <div class="list">
+                <a href="" class="logo"><img src="logo.svg" alt=""></a>
+                <a href="" class="close"><img src="icon-close.svg" alt=""></a>
+            </div>
+            <div class="left-user">
+                <div class="left-user-c">
+                    <div id="list2">
+                        <ul>
+                            <li>门店</li>
+                            <li>星享俱乐部</li>
+                            <li>菜单</li>
+                            <li></li>
+                            <li>星巴克移动应用</li>
+                            <li>星礼卡</li>
+                            <li>星巴克甄选</li>
+                            <li>咖啡星讲堂</li>
+                            <li>上海烘焙工坊</li>
+                            <li>关于星巴克</li>
+                            <li>帮助中心</li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="div1">
+                        <a href="">
+                            <img src="icon-account.svg" alt="">
+                            <span class="login">登陆</span>
+                        </a>
+                        <a href="" class="register">注册</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function(){
+            $('.more img').on('click', function(){
+                $('.overlay').addClass('swich');
+                return false;
+            });
+            $('.close img').on('click', function(){
+                $('.overlay').removeClass('swich');
+                return false;
+            })
+        })
+    </script>
 </body>
 </html>

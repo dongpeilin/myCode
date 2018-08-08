@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<div id="div1">-->
+    <!--{{msg}}-->
+<!--</div>-->
+<div id="islogin">
+    <h1 v-if = "msg=='B'">
+        B
+    </h1>
+    <h1 v-else-if = "msg=='A'">
+        A
+    </h1>
+    <h1 v-else>
+        d
+    </h1>
+</div>
+<script src="vue.js"></script>
+<script>
+    // let vue = new Vue({
+    //     el:"#div1",
+    //     data: {
+    //         msg:"hello world"
+    //     }
+    // });
+    let vm = new Vue({
+        el:'#islogin',
+        data:{
+            msg:'D'
+        }
+    });
+</script>
+</body>
+</html>

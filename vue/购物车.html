@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            border: 0px;
+            padding: 0px;
+        }
+        li{
+            list-style: none;
+        }
+        .red{
+            background: #ff0000 !important;
+        }
+        #banner1{
+            border-top: solid;
+        }
+    </style>
+</head>
+<!--<ul>-->
+    <!--<li @click='touch' :class=clsname>衣服</li>-->
+    <!--<li @click='touch' :class="">裤子</li>-->
+    <!--<li @click='touch' :class="">鞋子</li>-->
+    <!--<li @click='touch' :class="">iPhone8</li>-->
+<!--</ul>-->
+<body>
+<div id="banner">
+    <h1>todolist</h1>
+    <div id="banner1">
+        名称：
+        <input type="text" id="n" placeholder="请输入产品名称" style="border: solid" v-model="name">
+        价格：
+        <input type="number" id="n-p" style="border: solid" value="0" v-model="price">
+        <button style="border: solid" @click = "add()">增加</button>
+        <br/>
+        <input type="text" placeholder="请输入关键字" style="border: solid" v-model="select">
+        <button style="border: solid" @click="query()">查询</button>
+        <ul id="list">
+            <li v-for = "(goods,index) in article" @click ="touch(goods)" style="background: #cccccc;" :class="{red: goods.isRed}">
+                <input type="checkbox">
+                <label for="checkbox"><span>[X]</span>{{goods.name}}</label>
+                <span style="float: right">{{goods.price}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="vue.js"></script>
+<script>
+    new Vue({
+        el:'#banner',
+        data: {
+            name:'',
+            price:'',
+            select:'',
+            article:[
+                {name: '衣服', isRed: false, price:120},
+                {name: '裤子', isRed: false, price:130},
+                {name: '鞋子', isRed: false, price:3999},
+                {name: 'iPhone', isRed: false, price:5000}
+            ]
+        },
+        computed: {
+
+        },
+        methods: {
+            touch(obj) {
+                obj.isRed = !obj.isRed;
+            },
+            add(){
+                this.article.push({name:this.name,isRed:false,price:this.price})
+            },
+            query(){
+
+            }
+        }
+    })
+</script>
+</body>
+</html>

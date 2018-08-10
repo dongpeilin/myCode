@@ -14,6 +14,9 @@
         .red{
             background: #ff0000 !important;
         }
+        .blank{
+            display: none;
+        }
         #banner1{
             border-top: solid;
         }
@@ -39,11 +42,13 @@
         <button style="border: solid" @click="query()">查询</button>
         <ul id="list">
             <li v-for = "(goods,index) in article" @click ="touch(goods)" style="background: #cccccc;" :class="{red: goods.isRed}">
-                <input type="checkbox">
-                <label for="checkbox"><span>[X]</span>{{goods.name}}</label>
+                <input @click.stop type="checkbox" v-model="selcheck" :value="index">
+                <button @click.stop @click="del(index)">[X]</button><span>{{goods.name}}</span>
                 <span style="float: right">{{goods.price}}</span>
             </li>
         </ul>
+        <button @click="delcheck()" style="border: solid">删除选中</button>
+        <span>总价:{{total}}</span>
     </div>
 </div>
 <script src="vue.js"></script>
@@ -54,6 +59,8 @@
             name:'',
             price:'',
             select:'',
+            sum:0,
+            selcheck:[],
             article:[
                 {name: '衣服', isRed: false, price:120},
                 {name: '裤子', isRed: false, price:130},
@@ -62,7 +69,14 @@
             ]
         },
         computed: {
-
+            total(){
+                return this.article.reduce((sum,elem)=>{
+                    if (elem.isRed){
+                        sum+=parseInt(elem.price)
+                    }
+                    return sum
+                },0)
+            }
         },
         methods: {
             touch(obj) {
@@ -71,8 +85,26 @@
             add(){
                 this.article.push({name:this.name,isRed:false,price:this.price})
             },
+            del(index){
+                this.article.splice(index,1);
+                this.selcheck=[];
+            },
+            delcheck(){
+                this.article = this.article.filter((elem,index)=>{
+                    if (!this.selcheck.includes(index)){
+                        return elem;
+                    }
+                    //这里是循环，在这里清空数组会导致循环只能对第一个生效
+                })
+                this.selcheck=[];
+            },
             query(){
-
+                this.article=this.article.filter((elem,index)=>{
+                    //当需要输入部分就可以查询到时，应该讲较小的那部分作为includes里面的参数
+                    if (elem.name.includes(this.select)) {
+                        return elem;
+                    }
+                })
             }
         }
     })

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>璐璐吃货小铺</title>
+    <style>
+        *{
+            margin: 0px;
+            border: 0px;
+        }
+        #banner-bar-wrap{
+            height: 29px;
+            width: 970px;
+            background: #f2f2f2;
+        }
+        .use{
+            width: 950px;
+            margin: 0 auto;
+        }
+        #loginhand{
+            color: #777777;
+            float: right;
+            font-size: small;
+            height: 29px;
+            line-height: 29px;
+        }
+        #banner-interior{
+            width: 970px;
+            margin: 20px auto 0px auto;
+            border-left: 1px solid #dbd9d6;
+            border-right: 1px solid #dbd9d6;
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+        #logo{
+            padding: 10px 0px;
+            position: relative;
+        }
+        #login{
+            position: absolute;
+            top: 50px;
+            left: 150px;
+        }
+        #login input{
+            border: 1px solid #000;
+        }
+        #vip{
+            float: right;
+            border: 1px solid #000000;
+        }
+        #list{
+            height: 39px;
+            background: #ffff00;
+        }
+        #list ul{
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            padding: 0px;
+            margin: 0px;
+        }
+        .option{
+            list-style: none;
+            float: left;
+            background: #ec4487;
+            height: 39px;
+            width: 188px;
+            line-height: 39px;
+            text-align: center;
+            color: #ffffff;
+            margin-right: 2px;
+        }
+        #container{
+            margin: 10px auto;
+            position: relative;
+        }
+        #imgs img{
+            display: none;
+            width: 950px;
+            height: 355px;
+        }
+        #imgs .selected{
+            display: block;
+        }
+        #nav{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        #nav li,#arrows span{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #cccccc;
+            list-style: none;
+            margin-left: 5px;
+            line-height: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #arrows{
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+        #nav .nav-selected{
+            background: #00ff00;
+        }
+        #intro{
+            float: left;
+            width: 322px;
+            height: 200px;
+            margin-right: 32px;
+            margin-bottom: 20px;
+        }
+        .news-bar{
+            height: 43px;
+            border-top: 2px solid #000000;
+        }
+        .news-bar div{
+            float: left;
+            height: 43px;
+            line-height: 43px;
+        }
+        .news-bar span{
+            float: right;
+            height: 43px;
+            line-height: 43px;
+            font-size: 10px;
+            color: #CCCCCC;
+        }
+        #intro-content{
+            font-size: 15px;
+        }
+        .newsimg{
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        #news{
+            width: 322px;
+            height: 200px;
+            float: left;
+            margin-right: 32px;
+            margin-bottom: 20px;
+        }
+        #hot{
+            height: 200px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div id="banner">
+    <div id="banner-interior">
+        <div id="head">
+            <div id="banner-bar-wrap">
+                <div class="use"><span id="loginhand">璐璐小吃铺官方网站</span></div>
+            </div>
+            <div id="logo" class="use">
+                <img class="logo" src="img/timg.jpeg" alt="">
+                <div id="login">
+                    <input type="text" placeholder="用户名">
+                    <input type="password" placeholder="密码">
+                    <input type="button" value="确认过眼神，登陆">
+                </div>
+                <input id="vip" type="button" value="还不是会员？点我注册">
+            </div>
+            <div id="list" class="use">
+                <ul>
+                    <li class="option">首页</li>
+                    <li class="option">零食</li>
+                    <li class="option">吃货新闻</li>
+                    <li class="option">零食上新</li>
+                    <li class="option">会员专区</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="home-page" class="use">
+            <div id="rolling">
+                <div id="container">
+                    <div id="imgs">
+                        <img src="img/1.jpg" alt="" class="selected">
+                        <img src="img/2.jpg" alt="" class="">
+                        <img src="img/3.jpg" alt="" class="">
+                        <img src="img/4.jpg" alt="" class="">
+                    </div>
+                    <ul id="nav">
+                        <li class="nav-selected">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ul>
+                    <div id="arrows">
+                        <span id="prev">&lt;</span>
+                        <span id="next">&gt;</span>
+                    </div>
+                </div>
+            </div>
+            <div id="intro">
+                <div class="news-bar">
+                    <div>吃货简介</div>
+                    <span>MORE</span>
+                </div>
+                <div id="intro-content">
+                    <p>
+                        <img class="newsimg" src="img/5.jpg" alt="">吃货谷（www.chihuogu.com）是创建者谭霆2013年成立的中国吃货论坛第一门户，最开始吃货谷的宗旨是成立一个中国吃货俱乐部，打造一个中国吃货网站，所以建立了湖南同城美食吃货群及论坛，随即开始了漫漫成立与建设吃货网的道路！
+                    </p>
+                </div>
+            </div>
+            <div id="news">
+                <div class="news-bar">
+                    <div>吃货新闻</div>
+                    <span>MORE</span>
+                </div>
+                <div id="news-content">
+                    <p>
+                        <img class="newsimg" src="img/6.jpg" alt=""><a href="">震惊！这种东西千万不要吃！</a><br><span style="font-size: 10px">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
+                    </p>
+                </div>
+            </div>
+            <div id="hot">
+                <div class="news-bar">
+                    <div>吃货新闻</div>
+                    <span>MORE</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var oImgs=document.getElementById('imgs');//选择元素错误，要仔细
+    var oImg=oImgs.getElementsByTagName('img');
+    var oNav=document.getElementById('nav');
+    var ali=oNav.getElementsByTagName('li');
+    var iNowIndex=0;
+    var oPrev=document.getElementById('prev');
+    var oNext=document.getElementById('next');
+    for (var i=0;i<ali.length;i++) {
+        ali[i].index=i;
+        ali[i].onmouseover = function () {
+            iNowIndex=this.index;
+            changeimg();
+        }
+    }
+    oPrev.onclick=function () {
+        iNowIndex--;
+        if(iNowIndex<0){
+            iNowIndex=3;
+        }
+        changeimg();
+    }
+    oNext.onclick=function () {
+        iNowIndex++;
+        if(iNowIndex>3){
+            iNowIndex=0;
+        }
+        changeimg();
+    }
+    function changeimg(){
+        for (var x= 0; x < ali.length; x++) {
+            ali[x].className='';
+            oImg[x].className='';
+        }
+        ali[iNowIndex].className = 'nav-selected';
+        oImg[iNowIndex].className='selected';
+    }
+</script>
+</body>
+</html>

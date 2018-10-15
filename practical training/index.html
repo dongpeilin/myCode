@@ -6,12 +6,23 @@
     <style>
         *{
             margin: 0px;
-            border: 0px;
+            padding: 0px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: #ec4487;
+        }
+        body{
+            background-image:url(img/8.jpg);
+            background-size:contain;
         }
         #banner-bar-wrap{
             height: 29px;
             width: 970px;
             background: #f2f2f2;
+            border: 1px solid #CCCCCC;
         }
         .use{
             width: 950px;
@@ -29,27 +40,51 @@
             margin: 20px auto 0px auto;
             border-left: 1px solid #dbd9d6;
             border-right: 1px solid #dbd9d6;
+            box-shadow: 0 0 8px #3d3d3d;
         }
         .logo{
             width: 100px;
             height: 100px;
             background: #000;
+            border: 2px solid #f94e88;
         }
         #logo{
             padding: 10px 0px;
             position: relative;
+            width: 947px;
+            background-image: url(img/10.jpg);
         }
-        #login{
-            position: absolute;
-            top: 50px;
-            left: 150px;
+        #login {
+            border: 2px solid #ec4487;
+            border-radius: 10px;
+            float: left;
+            width: 220px;
+            height: 200px;
+            background: #efc7a3;
         }
-        #login input{
-            border: 1px solid #000;
+        .login-text{
+            height: 30px;
+            width: 200px;
+            margin: 5px auto;
+            font-size: 15px;
+            border-radius: 10px;
         }
         #vip{
-            float: right;
-            border: 1px solid #000000;
+            height: 30px;
+            width: 60px;
+            border: 2px solid #ffff00;
+            border-radius: 20px;
+        }
+        .vip-bar{
+            height: 43px;
+        }
+        .vip-bar div{
+            float: left;
+            height: 43px;
+            line-height: 43px;
+        }
+        #vip-login{
+            margin-top: 10px;
         }
         #list{
             height: 39px;
@@ -59,19 +94,19 @@
             width: 100%;
             height: 100%;
             background: #fff;
-            padding: 0px;
-            margin: 0px;
         }
-        .option{
+        .v-option{
             list-style: none;
             float: left;
             background: #ec4487;
             height: 39px;
-            width: 188px;
+            width: 184px;
             line-height: 39px;
             text-align: center;
             color: #ffffff;
             margin-right: 2px;
+            border-radius: 10px;
+            border: 2px solid #bd6f15;
         }
         #container{
             margin: 10px auto;
@@ -125,19 +160,23 @@
             height: 43px;
             line-height: 43px;
         }
-        .news-bar span{
+        .news-bar a{
+            text-decoration: none;
             float: right;
             height: 43px;
             line-height: 43px;
             font-size: 10px;
             color: #CCCCCC;
         }
+        .news-bar a:hover{
+            color: #ff0000;
+        }
         #intro-content{
             font-size: 15px;
         }
         .newsimg{
             float: left;
-            width: 100px;
+            width: 130px;
             height: 100px;
         }
         #news{
@@ -148,8 +187,172 @@
             margin-bottom: 20px;
         }
         #hot{
-            height: 200px;
+            height: 300px;
             clear: both;
+        }
+        #com li{
+            list-style: none;
+        }
+        .com-list{
+            width: 229px;
+            height: 229px;
+            float: left;
+            position: relative;
+            margin-right: 8px;
+        }
+        .before{
+            width: 229px;
+            height: 229px;
+            border: 3px solid #000000;
+            float: left;
+            border-radius: 10px;
+        }
+        .later{
+            text-align: center;
+            opacity: 0;
+            width: 235px;
+            height: 235px;
+            background: #000000;
+            position: absolute;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+        }
+        .com-list:hover .later{
+            opacity: 0.7;
+        }
+        .coypon{
+            color: #fff;
+            text-align: center;
+            margin-top: 85px;
+            font-size: 30px;
+        }
+        .enter{
+            width: 235px;
+            margin: 10px auto;
+            text-align: center;
+            border-radius: 19px;
+            background: #ff0000;
+            color: #fff;
+        }
+        #friends{
+            margin-bottom: 20px;
+        }
+        #link a{
+            text-decoration:none;
+            color: #4c4c4c;
+            font-size: 10px;
+            margin: 0px 50px;
+        }
+        #link a:hover {
+            color: #FF0036;
+        }
+        .copyright{
+            height: 99px;
+            background: #f2f2f2;
+            margin-bottom: 20px;
+            border: 1px solid #CCCCCC;
+            position: relative;
+        }
+        .copyright-text{
+            margin-top: 30px;
+        }
+        .copyright-text p{
+            font-size: 10px;
+            text-align: center;
+        }
+        .copyright-img{
+            font-size: 10px;
+            position: absolute;
+            top: 0px;
+            right: 20px;
+        }
+        .copyright-img img{
+            width: 80px;
+            margin-left: 54px;
+        }
+        #list .list-selected{
+            background: #efc7a3;
+        }
+        #switcher{
+            margin-top: 10px;
+        }
+        #switcher>div{
+            display: none;
+        }
+        #switcher .s-selected{
+            display: block;
+        }
+        .conc{
+            width: 950px;
+            margin: 0 auto;
+        }
+        #we{
+            width: 685px;
+            height: 580px;
+            font-size: 12px;
+            color: #808080;
+            text-align: center;
+        }
+        .rightbar{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 250px;
+            height: 100%;
+        }
+        .rightbar-att{
+            height: 50px;
+            border: 1px solid #ec4487;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        .rightbar-att-top{
+            height: 30px;
+            background: #ec4487;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 10px 10px 0px 0px;
+        }
+        #foodie-news{
+            width: 685px;
+            height: 600px;
+        }
+        #foodie-news-content>li{
+            list-style: none;
+            width: 685px;
+            height: 167px;
+            margin-top: 5px;
+            border-top: 2px solid #CCCCCC;
+            border-bottom: 2px solid #CCCCCC;
+        }
+        #foodie-news-content>li>div{
+            margin-top: 35px;
+        }
+        #foodie-news-content a{
+            font-size: 25px;
+        }
+        #snacks-update{
+            width: 685px;
+            height: 600px;
+        }
+        #lam{
+            width: 650px;
+            height: 600px;
+            background: #efc7a3;
+            border: 2px solid #ec4487;
+            border-radius: 30px;
+            position: relative;
+        }
+        #lam-imp{
+            height: 388px;
+            width: 600px;
+            position: absolute;
+            left: 27px;
+            top: 120px;
+        }
+        #lam-imp input{
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -161,26 +364,20 @@
                 <div class="use"><span id="loginhand">璐璐小吃铺官方网站</span></div>
             </div>
             <div id="logo" class="use">
-                <img class="logo" src="img/timg.jpeg" alt="">
-                <div id="login">
-                    <input type="text" placeholder="用户名">
-                    <input type="password" placeholder="密码">
-                    <input type="button" value="确认过眼神，登陆">
-                </div>
-                <input id="vip" type="button" value="还不是会员？点我注册">
+                <img class="logo" src="img/timg.jpg" alt="">
             </div>
             <div id="list" class="use">
-                <ul>
-                    <li class="option">首页</li>
-                    <li class="option">零食</li>
-                    <li class="option">吃货新闻</li>
-                    <li class="option">零食上新</li>
-                    <li class="option">会员专区</li>
+                <ul id="wor">
+                    <li class="v-option list-selected">首页</li>
+                    <li class="v-option">关于我们</li>
+                    <li class="v-option">吃货新闻</li>
+                    <li class="v-option">零食上新</li>
+                    <li class="v-option">访客留言</li>
                 </ul>
             </div>
         </div>
-
-        <div id="home-page" class="use">
+        <div id="switcher">
+            <div class="conc s-selected">
             <div id="rolling">
                 <div id="container">
                     <div id="imgs">
@@ -201,74 +398,461 @@
                     </div>
                 </div>
             </div>
-            <div id="intro">
-                <div class="news-bar">
-                    <div>吃货简介</div>
-                    <span>MORE</span>
+            <div id="middle">
+                <div id="intro">
+                    <div class="news-bar">
+                        <div>关于我们</div>
+                        <a href="we.html">MORE</a>
+                    </div>
+                    <div id="intro-content">
+                        <p style="font-size: 12px;color: #808080;line-height: 20px">
+                            <img class="newsimg" src="img/5.jpg" alt="">璐璐零食店（www.lulu.com）是创建者璐璐2013年成立的中国吃货论坛第一门户，最开始吃货谷的宗旨是成立一个中国吃货俱乐部，打造一个中国吃货网站，所以建立了湖南同城美食吃货群及论坛，随即开始了漫漫成立与建设吃货网的道路！
+                        </p>
+                    </div>
                 </div>
-                <div id="intro-content">
-                    <p>
-                        <img class="newsimg" src="img/5.jpg" alt="">吃货谷（www.chihuogu.com）是创建者谭霆2013年成立的中国吃货论坛第一门户，最开始吃货谷的宗旨是成立一个中国吃货俱乐部，打造一个中国吃货网站，所以建立了湖南同城美食吃货群及论坛，随即开始了漫漫成立与建设吃货网的道路！
-                    </p>
+                <div id="news">
+                    <div class="news-bar">
+                        <div>吃货头条</div>
+                        <a href="news1.html">MORE</a>
+                    </div>
+                    <div class="news-content">
+                        <p>
+                            <img class="newsimg" src="img/14.jpg" alt=""><a href="news1.html">震惊！这种东西千万不要吃！</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
+                            <div>
+                                <a href="news2.html">酒后这种东西也千万不能吃</a><br>
+                                <a href="news3.html">细说这些你没吃过的美食...</a>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+                <div id="login">
+                    <div class="vip-bar">
+                        <div style="margin-left: 80px">会员登陆</div>
+                        <span></span>
+                    </div>
+                    <div>
+                        <input class="login-text" type="text" placeholder="用户名">
+                        <input class="login-text" type="password" placeholder="密码">
+                        <div id="vip-login">
+                            <input id="vip" type="button" value="登陆">
+                            <input type="button" value="还不是会员？点我注册">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="news">
-                <div class="news-bar">
-                    <div>吃货新闻</div>
-                    <span>MORE</span>
-                </div>
-                <div id="news-content">
-                    <p>
-                        <img class="newsimg" src="img/6.jpg" alt=""><a href="">震惊！这种东西千万不要吃！</a><br><span style="font-size: 10px">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
-                    </p>
-                </div>
-            </div>
+
             <div id="hot">
                 <div class="news-bar">
-                    <div>吃货新闻</div>
-                    <span>MORE</span>
+                    <div>hot商品榜单：</div>
+                    <a href="shop1.html">MORE</a>
                 </div>
+                <div id="com">
+                    <ul>
+                        <li  class="com-list">
+                            <img class="before" src="img/7.jpg" alt="">
+                            <div class="later">
+                                <p class="coypon">夏威夷果</p>
+                                <a href="shop1.html" class="enter">点击进入</a>
+                            </div>
+                        </li>
+                        <li class="com-list">
+                            <img class="before" src="img/11.jpg" alt="">
+                            <div class="later">
+                                <p class="coypon">牛肉干</p>
+                                <a href="shop2.html" class="enter">点击进入</a>
+                            </div>
+                        </li>
+                        <li class="com-list">
+                            <img class="before" src="img/12.jpg" alt="">
+                            <div class="later">
+                                <p class="coypon">乌梅</p>
+                                <a href="shop3.html" class="enter">点击进入</a>
+                            </div>
+                        </li>
+                        <li class="com-list">
+                            <img class="before" src="img/13.jpg" alt="">
+                            <div class="later">
+                                <p class="coypon">手撕面包</p>
+                                <a href="shop4.html" class="enter">点击进入</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="friends">
+                <div class="news-bar">
+                    <div>友情连接：</div>
+                    <span></span>
+                </div>
+                <p id="link">
+                    <a href="https://www.1688.com">阿里巴巴</a>
+                    <a href="https://www.qq.com">腾讯</a>
+                    <a href="https://www.apple.com/cn/">apple</a>
+                    <a href="https://zhaopin.baidu.com/m/company?query=db05579b3ca47397792607f9c1bb443c&page=firmpage">唯创</a>
+                    <a href="https://www.baidu.com">百度</a>
+                    <a href="https://www.meituan.com">美团</a>
+                </p>
+            </div>
+            <div class="copyright">
+                <div class="copyright-text">
+                    <p>总部：哈尔滨信息工程学院　全国统一销售服务热线：18846762336</p>
+                    <p>版权所有：www.lulu.com ,All rights reserved Powered By 璐璐零食店</p>
+                    <div class="copyright-img">
+                        <img src="img/9.jpg" alt="">
+                        <p>扫描二维码快捷登陆网店</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="conc">
+                <div class="use" style="position: relative;">
+                    <p id="we">                璐璐零食店（www.lulu.com）是创建者璐璐2013年成立的中国吃货论坛第一门户，最开始吃货谷的宗旨是成立一个中国吃货俱乐部，打造一个中国吃货网站，所以建立了湖南同城美食吃货群及论坛，随即开始了漫漫成立与建设吃货网的道路！嘻嘻嘻嘻嘻嘻。
+                        <br><br> 璐璐零食店公众号：<br><br>
+                        <img src="img/9.jpg" alt="" style="width: 258px;height: 258px;">
+                        <br><br>
+                        吃货谷美食QQ群：<br>
+                        璐璐零食店,同城美食超级群 161153663 爆满 <br>
+                        璐璐零食店,美食二群超级群 342967997 满 <br>
+                        璐璐零食店,美食三群高级群 59422001   满 <br>
+                        <br><br><br>
+                        服务热线：0731-88888888 <br>
+                        传真号码：0731-88888888 <br>
+                        E-mail：1335304740@qq.com <br>
+                        联系地址：哈尔滨信息工程学院 <br>
+                    </p>
+                    <div class="rightbar">
+                            <div class="rightbar-att">
+                                <div class="rightbar-att-top">联系我们</div>
+                                <div style="height: 20px;text-align: center">18846762336</div>
+                            </div>
+                            <div style="margin-top: 40px">
+                                <div class="news-bar">
+                                <div>为您推荐</div>
+                                <a href="news1.html">MORE</a>
+                                </div>
+                                <div class="news-content">
+                                    <p>
+                                        <img class="newsimg" src="img/14.jpg" alt=""><a href="news1.html">震惊！这种东西千万不要吃！</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="news-bar">
+                                    <div>为您推荐</div>
+                                    <a href="shop1.html">MORE</a>
+                                </div>
+                                <li class="com-list" style="list-style: none">
+                                    <img class="before" src="img/7.jpg" alt="">
+                                    <div class="later">
+                                        <p class="coypon">夏威夷果</p>
+                                        <a href="shop1.html" class="enter">点击进入</a>
+                                    </div>
+                                </li>
+                            </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="copyright-text">
+                        <p>总部：哈尔滨信息工程学院　全国统一销售服务热线：18846762336</p>
+                        <p>版权所有：www.lulu.com ,All rights reserved Powered By 璐璐零食店</p>
+                        <div class="copyright-img">
+                            <img src="img/9.jpg" alt="">
+                            <p>扫描二维码快捷登陆网店</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conc">
+                <div class="use" style="position: relative;">
+                    <div id="foodie-news">
+                        <div class="news-bar">
+                            <div>今日头条</div>
+                        </div>
+                        <ul id="foodie-news-content">
+                            <li>
+                                <div class="news-content">
+                                    <p>
+                                        <img class="newsimg" src="img/14.jpg" alt=""><a href="news1.html">震惊！这种东西千万不要吃！</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-content">
+                                    <p>
+                                        <img class="newsimg" src="img/15.jpg" alt=""><a href="news2.html">酒后这种东西千万不要吃！</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">小伙伴们，知道吗？喝完酒后吃药......</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news-content">
+                                    <p>
+                                        <img class="newsimg" src="img/16.jpg" alt=""><a href="news3.html">细说这些你没吃过的美食....</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">八大菜系之首当推鲁菜。鲁菜的形成和发展与由山东地区的文化历史......</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rightbar">
+                        <div class="rightbar-att">
+                            <div class="rightbar-att-top">联系我们</div>
+                            <div style="height: 20px;text-align: center">18846762336</div>
+                        </div>
+                        <div style="margin-top: 40px">
+                            <div class="news-bar">
+                                <div>为您推荐</div>
+                                <a href="news2.html">MORE</a>
+                            </div>
+                            <div class="news-content">
+                                <p>
+                                    <img class="newsimg" src="img/15.jpg" alt=""><a href="news2.html">酒后这种东西千万不要吃！</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="news-bar">
+                                <div>为您推荐</div>
+                                <a href="shop2.html">MORE</a>
+                            </div>
+                            <li class="com-list" style="list-style: none">
+                                <img class="before" src="img/11.jpg" alt="">
+                                <div class="later">
+                                    <p class="coypon">风干牛肉</p>
+                                    <a href="shop2.html" class="enter">点击进入</a>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="copyright-text">
+                        <p>总部：哈尔滨信息工程学院　全国统一销售服务热线：18846762336</p>
+                        <p>版权所有：www.lulu.com ,All rights reserved Powered By 璐璐零食店</p>
+                        <div class="copyright-img">
+                            <img src="img/9.jpg" alt="">
+                            <p>扫描二维码快捷登陆网店</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conc">
+                <div class="use" style="position: relative">
+                    <div id="snacks-update">
+                        <ul>
+                            <li class="com-list" style="list-style: none;margin: 50px 50px 0px 50px">
+                                <img class="before" src="img/7.jpg" alt="">
+                                <div class="later">
+                                    <p class="coypon">夏威夷果</p>
+                                    <a href="shop1.html" class="enter">点击进入</a>
+                                </div>
+                            </li>
+                            <li class="com-list" style="list-style: none;margin: 50px 50px 0px 50px">
+                                <img class="before" src="img/11.jpg" alt="">
+                                <div class="later">
+                                    <p class="coypon">风干牛肉</p>
+                                    <a href="shop2.html" class="enter">点击进入</a>
+                                </div>
+                            </li>
+                            <li class="com-list" style="list-style: none;margin: 50px 50px 0px 50px">
+                                <img class="before" src="img/12.jpg" alt="">
+                                <div class="later">
+                                    <p class="coypon">干果</p>
+                                    <a href="shop3.html" class="enter">点击进入</a>
+                                </div>
+                            </li>
+                            <li class="com-list" style="list-style: none;margin: 50px 50px 0px 50px">
+                                <img class="before" src="img/13.jpg" alt="">
+                                <div class="later">
+                                    <p class="coypon">手撕面包</p>
+                                    <a href="shop4.html" class="enter">点击进入</a>
+                                </div>
+                            </li>
+                        </ul>
 
+                    </div>
+                    <div class="rightbar">
+                        <div class="rightbar-att">
+                            <div class="rightbar-att-top">联系我们</div>
+                            <div style="height: 20px;text-align: center">18846762336</div>
+                        </div>
+                        <div style="margin-top: 40px">
+                            <div class="news-bar">
+                                <div>为您推荐</div>
+                                <a href="news3.html">MORE</a>
+                            </div>
+                            <div class="news-content">
+                                <p>
+                                    <img class="newsimg" src="img/16.jpg" alt=""><a href="news3.html">细说这些你没吃过的美食...</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="news-bar">
+                                <div>为您推荐</div>
+                                <a href="shop3.html">MORE</a>
+                            </div>
+                            <li class="com-list" style="list-style: none">
+                                <img class="before" src="img/12.jpg" alt="">
+                                <div class="later">
+                                    <p class="coypon">乌梅</p>
+                                    <a href="shop3.html" class="enter">点击进入</a>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <div class="copyright-text">
+                            <p>总部：哈尔滨信息工程学院　全国统一销售服务热线：18846762336</p>
+                            <p>版权所有：www.lulu.com ,All rights reserved Powered By 璐璐零食店</p>
+                            <div class="copyright-img">
+                                <img src="img/9.jpg" alt="">
+                                <p>扫描二维码快捷登陆网店</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="conc">
+                <div class="use" style="position: relative">
+                    <div id="lam">
+                        <div id="lam-imp">
+                            <input type="text" placeholder="留言标题" style="margin-bottom: 40px;width: 260px;">
+                            <input type="textarea" placeholder="给我们提点意见吧" style="height: 300px;width: 600px;">
+                            <input type="button" value="提交留言" style="width: 100px;height: 30px;margin-top: 20px">
+                        </div>
+                    </div>
+                    <div class="rightbar">
+                        <div class="rightbar-att">
+                            <div class="rightbar-att-top">联系我们</div>
+                            <div style="height: 20px;text-align: center">18846762336</div>
+                        </div>
+                        <div style="margin-top: 40px">
+                            <div class="news-bar">
+                                <div>为您推荐</div>
+                                <a href="news1.html">MORE</a>
+                            </div>
+                            <div class="news-content">
+                                <p>
+                                    <img class="newsimg" src="img/6.jpg" alt=""><a href="news1.html">震惊！这种东西千万不要吃！</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="news-bar">
+                                <div>为您推荐</div>
+                                <a href="shop4.html">MORE</a>
+                            </div>
+                            <li class="com-list" style="list-style: none">
+                                <img class="before" src="img/13.jpg" alt="">
+                                <div class="later">
+                                    <p class="coypon">手撕面包</p>
+                                    <a href="shop4.html" class="enter">点击进入</a>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="copyright-text">
+                        <p>总部：哈尔滨信息工程学院　全国统一销售服务热线：18846762336</p>
+                        <p>版权所有：www.lulu.com ,All rights reserved Powered By 璐璐零食店</p>
+                        <div class="copyright-img">
+                            <img src="img/9.jpg" alt="">
+                            <p>扫描二维码快捷登陆网店</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <script>
-    var oImgs=document.getElementById('imgs');//选择元素错误，要仔细
-    var oImg=oImgs.getElementsByTagName('img');
-    var oNav=document.getElementById('nav');
-    var ali=oNav.getElementsByTagName('li');
-    var iNowIndex=0;
-    var oPrev=document.getElementById('prev');
-    var oNext=document.getElementById('next');
-    for (var i=0;i<ali.length;i++) {
-        ali[i].index=i;
-        ali[i].onmouseover = function () {
-            iNowIndex=this.index;
-            changeimg();
+    var oList = document.getElementById('wor');
+    var aLis = oList.getElementsByTagName('li');
+    var oSwitcher = document.getElementById('switcher');
+    var aConc = oSwitcher.getElementsByClassName('conc');
+    for(var i = 0;i < aLis.length;i++){
+        aLis[i].index = i;
+        aLis[i].onclick = function(){
+            for(var j = 0; j<aLis.length; j++){
+                aLis[j].className = 'v-option';
+                aConc[j].className = 'conc';
+            }
+            this.className += ' list-selected';
+            // 切换当前点击的li对应的div
+            aConc[this.index].className += ' s-selected';
         }
+        // aLis[i].onclick = function(){
+        //     for(var j = 0;j<aDiv.length;j++){
+        //         aLis[j].className='v-option';
+        //         aDiv[j].className='use';
+        //     }
+        //     this.className+='list-selected';
+        //     aDiv[this.index].className+='s-selected';
+        // }
     }
-    oPrev.onclick=function () {
-        iNowIndex--;
-        if(iNowIndex<0){
-            iNowIndex=3;
-        }
-        changeimg();
+
+
+    var oImgs = document.getElementById('imgs');
+    var aImg = oImgs.getElementsByTagName('img');
+    var oNav = document.getElementById('nav');
+    var aLi = oNav.getElementsByTagName('li');
+    var oPrev = document.getElementById('prev');
+    var oNext = document.getElementById('next');
+    var oContainer = document.getElementById('container');
+    var iNowIndex = 0; //  全局变量，保存的是当前显示图片的索引
+    var timer;
+
+    for (var i = 0; i < aLi.length; i++) {
+        aLi[i].index = i;
+        aLi[i].onmouseover = function () {
+            iNowIndex = this.index;
+            changeImg();
+        };
     }
-    oNext.onclick=function () {
-        iNowIndex++;
-        if(iNowIndex>3){
-            iNowIndex=0;
+
+    oPrev.onclick = oNext.onclick = function () {
+        if (this === oPrev) {
+            iNowIndex--;
+            if (iNowIndex == -1) {
+                iNowIndex = aLi.length - 1;
+            }
+        } else {
+            iNowIndex++;
+            if (iNowIndex == aLi.length) {
+                iNowIndex = 0;
+            }
         }
-        changeimg();
+        changeImg();
+    };
+
+    oPrev.onselectstart = oNext.onselectstart = function(){
+        return false;
+    };
+
+    oContainer.onmouseover = function(){
+        clearInterval(timer);
+    };
+    oContainer.onmouseout = function(){
+        play();
+    };
+
+    play();
+
+    // 切换
+    function changeImg() {
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].className = '';
+            aImg[i].className = '';
+        }
+        aLi[iNowIndex].className = 'nav-selected';
+        aImg[iNowIndex].className = 'selected';
     }
-    function changeimg(){
-        for (var x= 0; x < ali.length; x++) {
-            ali[x].className='';
-            oImg[x].className='';
-        }
-        ali[iNowIndex].className = 'nav-selected';
-        oImg[iNowIndex].className='selected';
+    // 播放
+    function play(){
+        timer = setInterval(function(){
+            oNext.onclick();
+        }, 3000);
     }
 </script>
 </body>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: #ec4487;
+        }
+        body{
+            background-image:url(img/8.jpg);
+            background-size:contain;
+        }
+        #banner-bar-wrap{
+            height: 29px;
+            width: 970px;
+            background: #f2f2f2;
+            border: 1px solid #CCCCCC;
+        }
+        .use{
+            width: 950px;
+            margin: 0 auto;
+        }
+        #loginhand{
+            color: #777777;
+            float: right;
+            font-size: small;
+            height: 29px;
+            line-height: 29px;
+        }
+        #banner-interior{
+            width: 970px;
+            margin: 20px auto 0px auto;
+            border-left: 1px solid #dbd9d6;
+            border-right: 1px solid #dbd9d6;
+            box-shadow: 0 0 8px #3d3d3d;
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            border: 2px solid #f94e88;
+        }
+        #logo{
+            padding: 10px 0px;
+            position: relative;
+            width: 947px;
+            background-image: url(img/10.jpg);
+        }
+        #login {
+            border: 2px solid #ec4487;
+            border-radius: 10px;
+            float: left;
+            width: 220px;
+            height: 200px;
+            background: #efc7a3;
+        }
+        .login-text{
+            height: 30px;
+            width: 200px;
+            margin: 5px auto;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        #vip{
+            height: 30px;
+            width: 60px;
+            border: 2px solid #ffff00;
+            border-radius: 20px;
+        }
+        .vip-bar{
+            height: 43px;
+        }
+        .vip-bar div{
+            float: left;
+            height: 43px;
+            line-height: 43px;
+        }
+        #vip-login{
+            margin-top: 10px;
+        }
+        #list{
+            height: 39px;
+            background: #ffff00;
+        }
+        #list ul{
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+        .v-option{
+            list-style: none;
+            float: left;
+            background: #ec4487;
+            height: 39px;
+            width: 184px;
+            line-height: 39px;
+            text-align: center;
+            color: #ffffff;
+            margin-right: 2px;
+            border-radius: 10px;
+            border: 2px solid #bd6f15;
+        }
+        #container{
+            margin: 10px auto;
+            position: relative;
+        }
+        #imgs img{
+            display: none;
+            width: 950px;
+            height: 355px;
+        }
+        #imgs .selected{
+            display: block;
+        }
+        #nav{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        #nav li,#arrows span{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #cccccc;
+            list-style: none;
+            margin-left: 5px;
+            line-height: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #arrows{
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+        #nav .nav-selected{
+            background: #00ff00;
+        }
+        #intro{
+            float: left;
+            width: 322px;
+            height: 200px;
+            margin-right: 32px;
+            margin-bottom: 20px;
+        }
+        .news-bar{
+            height: 43px;
+            border-top: 2px solid #000000;
+        }
+        .news-bar div{
+            float: left;
+            height: 43px;
+            line-height: 43px;
+        }
+        .news-bar a{
+            text-decoration: none;
+            float: right;
+            height: 43px;
+            line-height: 43px;
+            font-size: 10px;
+            color: #CCCCCC;
+        }
+        .news-bar a:hover{
+            color: #ff0000;
+        }
+        #intro-content{
+            font-size: 15px;
+        }
+        .newsimg{
+            float: left;
+            width: 130px;
+            height: 100px;
+        }
+        #news{
+            width: 322px;
+            height: 200px;
+            float: left;
+            margin-right: 32px;
+            margin-bottom: 20px;
+        }
+        #hot{
+            height: 300px;
+            clear: both;
+        }
+        #com li{
+            list-style: none;
+        }
+        .com-list{
+            width: 229px;
+            height: 229px;
+            float: left;
+            position: relative;
+            margin-right: 8px;
+        }
+        .before{
+            width: 229px;
+            height: 229px;
+            border: 3px solid #000000;
+            float: left;
+            border-radius: 10px;
+        }
+        .later{
+            text-align: center;
+            opacity: 0;
+            width: 235px;
+            height: 235px;
+            background: #000000;
+            position: absolute;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+        }
+        .com-list:hover .later{
+            opacity: 0.7;
+        }
+        .coypon{
+            color: #fff;
+            text-align: center;
+            margin-top: 85px;
+            font-size: 30px;
+        }
+        .enter{
+            width: 235px;
+            margin: 10px auto;
+            text-align: center;
+            border-radius: 19px;
+            background: #ff0000;
+            color: #fff;
+        }
+        #friends{
+            margin-bottom: 20px;
+        }
+        #link a{
+            text-decoration:none;
+            color: #4c4c4c;
+            font-size: 10px;
+            margin: 0px 50px;
+        }
+        #link a:hover {
+            color: #FF0036;
+        }
+        .copyright{
+            height: 99px;
+            background: #f2f2f2;
+            margin-bottom: 20px;
+            border: 1px solid #CCCCCC;
+            position: relative;
+        }
+        .copyright-text{
+            margin-top: 30px;
+        }
+        .copyright-text p{
+            font-size: 10px;
+            text-align: center;
+        }
+        .copyright-img{
+            font-size: 10px;
+            position: absolute;
+            top: 0px;
+            right: 20px;
+        }
+        .copyright-img img{
+            width: 80px;
+            margin-left: 54px;
+        }
+        #list .list-selected{
+            background: #efc7a3;
+        }
+        #switcher{
+            margin-top: 10px;
+        }
+        #switcher>div{
+            display: none;
+        }
+        #switcher .s-selected{
+            display: block;
+        }
+        .conc{
+            width: 950px;
+            margin: 0 auto;
+        }
+        #we{
+            width: 685px;
+            height: 580px;
+            font-size: 12px;
+            color: #808080;
+            text-align: center;
+        }
+        .rightbar{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 250px;
+            height: 100%;
+        }
+        .rightbar-att{
+            height: 50px;
+            border: 1px solid #ec4487;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+        .rightbar-att-top{
+            height: 30px;
+            background: #ec4487;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 10px 10px 0px 0px;
+        }
+        #foodie-news{
+            width: 685px;
+            height: 600px;
+        }
+        #foodie-news-content>li{
+            list-style: none;
+            width: 685px;
+            height: 167px;
+            margin-top: 5px;
+            border-top: 2px solid #CCCCCC;
+            border-bottom: 2px solid #CCCCCC;
+        }
+        #foodie-news-content>li>div{
+            margin-top: 35px;
+        }
+        #foodie-news-content a{
+            font-size: 25px;
+        }
+        #snacks-update{
+            width: 685px;
+            height: 600px;
+        }
+        #lam{
+            width: 650px;
+            height: 600px;
+            background: #efc7a3;
+            border: 2px solid #ec4487;
+            border-radius: 30px;
+            position: relative;
+        }
+        #lam-imp{
+            height: 388px;
+            width: 600px;
+            position: absolute;
+            left: 27px;
+            top: 120px;
+        }
+        #lam-imp input{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="banner">
+    <div id="banner-interior">
+        <div id="head">
+            <div id="banner-bar-wrap">
+                <div class="use"><span id="loginhand">璐璐小吃铺官方网站</span></div>
+            </div>
+            <div id="logo" class="use">
+                <img class="logo" src="img/timg.jpg" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="news-bar">
+                <div>璐璐零食店</div>
+                <a href="index.html">RETURN</a>
+            </div>
+        </div>
+        <div class="conc">
+            <div class="use" style="position: relative;">
+                <p id="we">                璐璐零食店（www.lulu.com）是创建者璐璐2013年成立的中国吃货论坛第一门户，最开始吃货谷的宗旨是成立一个中国吃货俱乐部，打造一个中国吃货网站，所以建立了湖南同城美食吃货群及论坛，随即开始了漫漫成立与建设吃货网的道路！嘻嘻嘻嘻嘻嘻。
+                    <br><br> 璐璐零食店公众号：<br><br>
+                    <img src="img/9.jpg" alt="" style="width: 258px;height: 258px;">
+                    <br><br>
+                    吃货谷美食QQ群：<br>
+                    璐璐零食店,同城美食超级群 161153663 爆满 <br>
+                    璐璐零食店,美食二群超级群 342967997 满 <br>
+                    璐璐零食店,美食三群高级群 59422001   满 <br>
+                    <br><br><br>
+                    服务热线：0731-88888888 <br>
+                    传真号码：0731-88888888 <br>
+                    E-mail：1335304740@qq.com <br>
+                    联系地址：哈尔滨信息工程学院 <br>
+                </p>
+                <div class="rightbar">
+                    <div class="rightbar-att">
+                        <div class="rightbar-att-top">联系我们</div>
+                        <div style="height: 20px;text-align: center">18846762336</div>
+                    </div>
+                    <div style="margin-top: 40px">
+                        <div class="news-bar">
+                            <div>为您推荐</div>
+                            <a href="">MORE</a>
+                        </div>
+                        <div class="news-content">
+                            <p>
+                                <img class="newsimg" src="img/6.jpg" alt=""><a href="">震惊！这种东西千万不要吃！</a><br><span style="font-size: 12px; line-height: 20px; color: #808080 ">每年年底，美国国际教育协会IIE都会发布一份关于留学生人数的统计报告，根据......</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="news-bar">
+                            <div>为您推荐</div>
+                            <a href="">MORE</a>
+                        </div>
+                        <li class="com-list" style="list-style: none">
+                            <img class="before" src="img/11.jpg" alt="">
+                            <div class="later">
+                                <p class="coypon">夏威夷果</p>
+                                <a href="com4.html" class="enter">点击进入</a>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="copyright-text">
+                    <p>总部：哈尔滨信息工程学院　全国统一销售服务热线：18846762336</p>
+                    <p>版权所有：www.lulu.com ,All rights reserved Powered By 璐璐零食店</p>
+                    <div class="copyright-img">
+                        <img src="img/9.jpg" alt="">
+                        <p>扫描二维码快捷登陆网店</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

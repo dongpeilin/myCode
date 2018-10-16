@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.h-banner{
+    height: 80px;
+    width: 100%;
+}
+.b-banner{
+    width: 90%;
+    height: 950px;
+    margin: 0% 5%;
+}
+.h-top{
+    height: 40px;
+}
+.h-bottom{
+    height: 40px;
+    background: #ff0000;
+}
+.h-left{
+    float: left;
+    margin-left: 80px;
+}
+.h-left>img{
+    height: 38px;
+    float: left;
+}
+.menu1{
+    height: 40px;
+    color: #ff0000;
+    font-size: 18px;
+    font-weight: 800;
+    float: left;
+    line-height: 40px;
+}
+.CBC{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    font-weight: 900;
+}
+.h-right{
+    float: right;
+    margin-right: 80px;
+}
+.h-right>img {
+    height: 64px;
+}
+.h-list{
+    margin-left: 320px;
+}
+.h-list li{
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    width: 100px;
+    float: left;
+    margin: 8px 24px;
+    color: #ffffff;
+}
+.h-list li:hover{
+    color: #ff0000;
+    background: #ffffff;
+    cursor:pointer;
+}
+.b-body{
+    margin-top: 32px;
+}
+.b-bar{
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 40px;
+    width: 100%;
+    margin: 8px 0px;
+    height: 40px;
+    border-bottom: 1px solid #000000;
+}
+.banner{
+    height: 360px;
+}
+.banner img{
+    width: 686px;
+    float: left;
+}
+.b-right{
+    position: relative;
+    float: left;
+    width: 510px;
+    height: 312px;
+    border-top: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+.r-bar{
+    margin-top: 16px;
+    margin-left: 16px;
+    width: 416px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #ff0000;
+}
+.r-bar2{
+    width: 416px;
+    margin-left: 20px;
+    margin-top: 20px;
+    line-height: 35px;
+    font-size: 25px;
+    font-weight: 900;
+}
+.r-bar3{
+    width: 416px;
+    margin-left: 20px;
+    margin-top: 20px;
+    line-height: 18px;
+    font-size: 12px;
+
+}
+.r-bar4{
+    width: 416px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+}
+.b-list{
+    margin-top: 20px;
+    height: 380px;
+}
+.b-list li{
+    width: 380px;
+    height: 304px;
+    float: left;
+}
+.b-list img{
+    height: 192px;
+    width: 380px;
+}
+.l-bar{
+    margin-top: 12px;
+    margin-left: 16px;
+    width: 416px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #ff0000;
+}
+.l-text{
+    margin-top: 12px;
+    margin-left: 16px;
+    width: 384px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

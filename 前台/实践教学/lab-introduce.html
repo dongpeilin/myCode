@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="body">
+    <div class="head">
+        <a href="index.html" class="logo"></a>
+        <form>
+            <input type="text" placeholder="请输入关键字查找">
+            <button></button>
+        </form>
+    </div>
+    <div class="nav">
+        <ul id="jsddm">
+            <li>
+                <a href="index.html">学院介绍</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">学校概况</a></li>
+                    <li><a href="#">发展历程</a></li>
+                </ul>
+            </li>
+            <li><a href="#">本科教育</a>
+            </li>
+            <li>
+                <a href="#">专科教育</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">教学单位</a></li>
+                    <li><a href="#">党群行政部门</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">名师风采</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">教师信息网</a></li>
+                    <li><a href="#">高等教育研究所</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">实践教学</a>
+            </li>
+            <li><a href="#">学术科研</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">重点学科</a></li>
+                    <li><a href="#">学位授权点</a></li>
+                    <li><a href="#">科研机构</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">学生工作</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">学校地图</a></li>
+                    <li><a href="#">图书馆</a></li>
+                    <li><a href="#">信息门户</a></li>
+                    <li><a href="#">校园网</a></li>
+                    <li><a href="#">交通信息</a></li>
+                    <li><a href="#">超算平台</a></li>
+                    <li><a href="#">智能填表系统</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">继续教育</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var timeout= 500;
+        var closetimer= 0;
+        var ddmenuitem= 0;
+        function jsddm_open()
+        {  jsddm_canceltimer();
+            jsddm_close();
+            ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+        function jsddm_close()
+        {  if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+        function jsddm_timer()
+        {  closetimer = window.setTimeout(jsddm_close, timeout);}
+        function jsddm_canceltimer()
+        {  if(closetimer)
+        {  window.clearTimeout(closetimer);
+            closetimer = null;}}
+        $(document).ready(function()
+        {  $('#jsddm > li').bind('mouseover', jsddm_open);
+            $('#jsddm > li').bind('mouseout', jsddm_timer);});
+        document.onclick = jsddm_close;
+    </script>
+    <div class="tab1">
+        <div>
+            <a href="index.html">首页</a>/实践教学/ 实验室介绍 /
+        </div>
+    </div>
+    <div class="content">
+        <div id="nav" class="left">
+            <h2>实践教学</h2>
+            <ul>
+                <li class="li1">
+                    <a href="#">实验室介绍</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="li1">
+                    <a href="company-profilr.html">实习企业介绍</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="li1">
+                    <a href="correlation.html">相关文档</a>
+                </li>
+            </ul>
+        </div>
+        <script>
+
+            $(function(){
+                $('#nav>ul>li').mouseover(function(){
+                    $(this).children('ul').show()
+                })
+                $('#nav>ul>li').mouseout(function(){
+                    $(this).children('ul').hide()
+                })
+            })
+        </script>
+        <div class="right">
+            <h1><i></i>实践教学<a href="index1.html" style="float: right;text-decoration: none;color: #000000;font-size: 12px">下一页</a><a href="index1.html" style="float: right;text-decoration: none;color: #000000;font-size: 12px">上一页|</a></h1>
+            <h2>实验室介绍</h2>
+            <p>更新时间：2016-09-18</p>
+            <div class="htmleaf-container">
+                <div class="demo">
+                    <div class="width250" style="height: 302px">
+                        <div class="box">
+                            <img src="img/01.jpg" alt="" style="height: 302px"/>
+                            <div class="box-content">
+                                <h3 class="title">计算机硬件实验室</h3>
+                                <ul class="icon">
+                                    <li><a href="#" class="fa fa-link"></a></li>
+                                    <li><a href="#" class="fa fa-search"></a></li>
+                                </ul>
+                                <p class="description" style="text-align: left">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;实验室是与联想集计算机硬件实验室I创建于2010年，
+                                    团合作共同建设的，为软件工程专业、  计算机科学与技术专业提供实验设备和实验环境。具体内容包括:产品性能参数介绍、计算机硬件组装、操作系统安装与调试、常用软件安装与应用、常见故障诊断与排除、Windbg 蓝屏分析、CSKB知识库的查询、万用表及地线检测仪的...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="width250">
+                        <div class="box">
+                            <img src="img/02.jpg" alt="" style="height: 302px"/>
+                            <div class="box-content">
+                                <h3 class="title">前端设计研发室</h3>
+                                <ul class="icon">
+                                    <li><a href="#" class="fa fa-link"></a></li>
+                                    <li><a href="#" class="fa fa-search"></a></li>
+                                </ul>
+                                <p class="description"style="text-align: left">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;前端设计研发室，是学院林干前墙设计开发而设止的，研究家题包括HTMLS CSs ui设计Js等，主要研发方向为手机ADD软件、网站客户端等前台模块的构建与制作。目前前端设计研发室已成功研发制作了“黑龙江省龙江县农民补贴网官方网站”、“黑龙江省教育资源统计系统(响应式)”、“哈尔滨制药六厂-健康资讯网”、“OXID电子商务平台全栈开发”等10余个项目，受到委托单位与使用者的一致好评。
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="width250">
+                        <div class="box">
+                            <img src="img/03.jpg" alt="" style="height: 302px"/>
+                            <div class="box-content">
+                                <h3 class="title">软件重用实验室</h3>
+                                <ul class="icon">
+                                    <li><a href="#" class="fa fa-link"></a></li>
+                                    <li><a href="#" class="fa fa-search"></a></li>
+                                </ul>
+                                <p class="description"style="text-align: left">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;软件重用实验室主要研究软件复用技术，软件复用是提高软件生产力和质量的一种重要技术，是将已有软件的各种有关知识用于建立新的软件，以缩减软件开发和维护的花费，是一种计算机软件工程方法和理论。早期的软件复用主要是代码级复用，目前研究领域可扩大到包括知识、开发经验、设计决定、体系结构、需求、  设计、代码和文档等一切有关方面。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="width250">
+                        <div class="box">
+                            <img src="img/04.jpg" alt="" style="height: 302px"/>
+                            <div class="box-content">
+                                <h3 class="title">单片机实验室</h3>
+                                <ul class="icon">
+                                    <li><a href="#" class="fa fa-link"></a></li>
+                                    <li><a href="#" class="fa fa-search"></a></li>
+                                </ul>
+                                <p class="description"style="text-align: left">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;单片机实验室在2017年投入建设，实验室共30个教学工位。主要配有单片机综合实验箱(DICE-5208K) 8台、单片机综合开发板30台、ARM 开发系统30台、实验工具箱30套、嵌入式演示套件1套等，固定资产十余万元。可承担《单片机原理与应用》、《微机接口与技术》、《EDA技术》、《ARM系统设计》和《Altium Designer电路设计》等以里的教学与实验任务。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="width250">
+                        <div class="box">
+                            <img src="img/05.jpg" alt="" style="height: 302px"/>
+                            <div class="box-content">
+                                <h3 class="title">大数据与数据挖掘实验室</h3>
+                                <ul class="icon">
+                                    <li><a href="#" class="fa fa-link"></a></li>
+                                    <li><a href="#" class="fa fa-search"></a></li>
+                                </ul>
+                                <p class="description"style="text-align: left">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;大数据与数据挖掘实验室，为计算机科学与技术专业重点实验室。实验室硬件环境包括学生实验的PC机以及服务器环境两大部分。学生PC机根据实验内容需要，可以运行不同的虚拟机环境以完成数据分析或者系统搭建实验。通过专业的大数据分析计算资源搭建的开放式大数据分析平台，可以充分的融合教师的科研需求，教师可以在开放的平台环境下开展大数据科研工作。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="width250">
+                        <div class="box">
+                            <img src="img/06.jpg" alt="" style="height: 302px"/>
+                            <div class="box-content">
+                                <h3 class="title">信息安全实验室</h3>
+                                <ul class="icon">
+                                    <li><a href="#" class="fa fa-link"></a></li>
+                                    <li><a href="#" class="fa fa-search"></a></li>
+                                </ul>
+                                <p class="description"style="text-align: left">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;MR{混合现实)应用研发室成立于2017年9月，是软件工程专业在增强现实实验室基础上建立起来的前沿科技实验室，主要从事混合现实应用开发方面的研究。并于2014年给评估专家做过相关技术的呈现!给评估专家们留下了深刻的印象!随着计算机硬件技术的发展，  电脑越来越小型化!穿戴式移动设备在未来5年内将会进入全世界各个领域，进入千家万户!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer1">
+            <div class="left_footer">
+                <div><a href="#">网址导航</a>︱<a href="#">新闻中心</a>︱<a href="#">学院简介</a>︱<a href="#">联系我们</a></div>
+                <p class="p1">
+                    地址：哈尔滨市宾西经济技术开发区大学城9号&nbsp;&nbsp;&nbsp;&nbsp;邮编：150431
+                </p>
+                <p>
+                    电话：0451-58607916 &nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+
+            </div>
+            <div class="right_footer">
+                <p>微信二维码</p>
+                <img src="img/er.jpg" height="126">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

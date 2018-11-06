@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="body">
+    <div class="head">
+        <a href="index.html" class="logo"></a>
+        <form>
+            <input type="text" placeholder="请输入关键字查找">
+            <button></button>
+        </form>
+    </div>
+    <div class="nav">
+        <ul id="jsddm">
+            <li>
+                <a href="index.html">学院介绍</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">学校概况</a></li>
+                    <li><a href="#">发展历程</a></li>
+                </ul>
+            </li>
+            <li><a href="#">本科教育</a>
+            </li>
+            <li>
+                <a href="#">专科教育</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">教学单位</a></li>
+                    <li><a href="#">党群行政部门</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">名师风采</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">教师信息网</a></li>
+                    <li><a href="#">高等教育研究所</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">实践教学</a>
+            </li>
+            <li><a href="#">学术科研</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">重点学科</a></li>
+                    <li><a href="#">学位授权点</a></li>
+                    <li><a href="#">科研机构</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">学生工作</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">学校地图</a></li>
+                    <li><a href="#">图书馆</a></li>
+                    <li><a href="#">信息门户</a></li>
+                    <li><a href="#">校园网</a></li>
+                    <li><a href="#">交通信息</a></li>
+                    <li><a href="#">超算平台</a></li>
+                    <li><a href="#">智能填表系统</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">继续教育</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var timeout= 500;
+        var closetimer= 0;
+        var ddmenuitem= 0;
+        function jsddm_open()
+        {  jsddm_canceltimer();
+            jsddm_close();
+            ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+        function jsddm_close()
+        {  if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+        function jsddm_timer()
+        {  closetimer = window.setTimeout(jsddm_close, timeout);}
+        function jsddm_canceltimer()
+        {  if(closetimer)
+        {  window.clearTimeout(closetimer);
+            closetimer = null;}}
+        $(document).ready(function()
+        {  $('#jsddm > li').bind('mouseover', jsddm_open);
+            $('#jsddm > li').bind('mouseout', jsddm_timer);});
+        document.onclick = jsddm_close;
+    </script>
+    <div class="tab1">
+        <div>
+            <a href="index.html">首页</a>/实践教学/ 实习企业介绍 /
+        </div>
+    </div>
+    <div class="content">
+        <div id="nav" class="left">
+            <h2>实践教学</h2>
+            <ul>
+                <li class="li1">
+                    <a href="index1.html">实验室介绍</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="li1">
+                    <a href="#">实习企业介绍</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="li1">
+                    <a href="correlation.html">相关文档</a>
+                </li>
+            </ul>
+        </div>
+        <script>
+
+            $(function(){
+                $('#nav>ul>li').mouseover(function(){
+                    $(this).children('ul').show()
+                })
+                $('#nav>ul>li').mouseout(function(){
+                    $(this).children('ul').hide()
+                })
+            })
+        </script>
+        <div class="right">
+            <h1><i></i>实践教学</h1>
+            <h2>实习企业介绍</h2>
+            <p>更新时间：2016-09-18</p>
+            <div class="htmleaf-container">
+                <div class="demo">
+                    <p style="text-align: left;font-size: 12px;margin-bottom: 30px;font-size: 14px;"><span style="color: #000000">LCPE.LCSE简介：</span>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;联想LCPE订单班是应联想项目实施团队（外包等服务项目）人员需求开设的校企合作班级。 联想LCSE订单班是应联想售后服务（全国各地服务）人员需求开设的校企合作班级。
+
+                        　　<br><br><span style="color: #000000">LCPE就业地点：</span>
+
+                        　　<br>&nbsp;&nbsp;&nbsp;&nbsp;深圳,北京,上海,惠州郑州等经济发达地区。
+                        <br><br><span style="color: #000000">LCSE就业地点：</span>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;全国维修站。
+
+                    </p>
+                    <ul style="color: #959e9c;line-height: 20px;margin-bottom: 30px;font-size: 14px">
+                        <li style="color: #000000">LCPE就业岗位：</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;项目工程师</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;项目后台支持</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;项目备件</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;项目热线</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;网络工程师</li>
+                        <li style="color: #000000;margin-top: 20px">高薪岗位:</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;服务器工程师</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;英文热线工程师</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;项目经理</li>
+                    </ul>
+                    <ul style="color: #959e9c;line-height: 20px;font-size: 14px">
+                        <li style="color: #000000">LCSE就业岗位：</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;接待工程师</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;后台维修工程师</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;上门服务工程师</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;热线.协调专员</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;备件专员</li>
+                        <li style="color: #000000;margin-top: 20px">高薪岗位:</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;销售岗</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;行政管理岗</li>
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;高级技术岗</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer1">
+            <div class="left_footer">
+                <div><a href="#">网址导航</a>︱<a href="#">新闻中心</a>︱<a href="#">学院简介</a>︱<a href="#">联系我们</a></div>
+                <p class="p1">
+                    地址：哈尔滨市宾西经济技术开发区大学城9号&nbsp;&nbsp;&nbsp;&nbsp;邮编：150431
+                </p>
+                <p>
+                    电话：0451-58607916 &nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+
+            </div>
+            <div class="right_footer">
+                <p>微信二维码</p>
+                <img src="img/er.jpg" height="126">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.c-banner{
+    width: 1200px;
+    margin: 0px auto;
+    height: 2000px;
+}
+.c-head{
+    width: 1100px;
+    height: 120px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.c-logo{
+    height: 120px;
+    float: left;
+}
+.c-list{
+    width: 940px;
+    height: 30px;
+    background: #ffe7b9;
+    margin-top: 50px;
+}
+.c-list li{
+    font-size: 12px;
+    margin-left: 40px;
+    float: left;
+    line-height: 30px;
+}
+.b-bimg{
+    height: 360px;
+    width: 100%;
+}
+.com-list{
+    height: 240px;
+    width: 800px;
+    margin: 30px auto 0px auto;
+}
+.com-list li{
+    width: 370px;
+    height: 240px;
+    float: left;
+    margin-right: 30px;
+}
+.com-list img{
+    width: 370px;
+    height: 240px;
+}
+.com-list2{
+    height: 340px;
+    width: 1100px;
+    margin: 50px auto 0px auto;
+}
+.com-list2 li{
+    height: 340px;
+    width: 240px;
+    float: left;
+    margin-right: 35px;
+}
+.b-top{
+    height: 240px;
+    width: 240px;
+}
+.b-top img{
+    height: 240px;
+    width: 240px;
+}
+.b-bottom{
+    width: 240px;
+    height: 100px;
+    text-align: center;
+}
+.more-point{
+    height: 40px;
+    width: 200px;
+    margin: 50px auto 50px auto;
+}
+.more-point li{
+    width: 10px;
+    height: 10px;
+    background: #cccccc;
+    margin: 0px 0px 0px 30px;
+    float: left;
+}
+.c-bottom img{
+    width: 100%;
+    height: 700px;
+}
+
+
+
+
+.d-banner{
+    width: 768px;
+    margin: 0px auto;
+    height: 1000px;
+}
+.c-head1{
+    width: 704px;
+    height: 76px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.c-logo1{
+    height: 76px;
+    float: left;
+}
+.c-list1{
+    width: 602px;
+    height: 20px;
+    background: #ffe7b9;
+    margin-top: 50px;
+}
+.c-list1 li{
+    margin-left: 38px;
+    float: left;
+    line-height: 20px;
+}
+.b-bimg1{
+    height: 240px;
+    width: 100%;
+}
+.com-list1{
+    height: 160px;
+    width: 580px;
+    margin: 20px auto 0px auto;
+}
+.com-list1 img{
+    width: 270px;
+    height: 160px;
+}
+.com-list1 li{
+    width: 270px;
+    height: 160px;
+    background: #003e6d;
+    float: left;
+    margin-right: 20px;
+}
+.centerbartext {
+    width: 70px;
+    margin: 20px auto 10px auto;
+}
+.wire{
+    width: 700px;
+    height: 2px;
+    background: #cccccc;
+    margin: 0px auto 40px auto;
+}
+.ipad-bottom img{
+    width: 100%;
+}
+
+
+
+
+
+
+.p-banner{
+    width: 400px;
+    margin: 0px auto;
+    height: 2000px;
+}
+.p-head{
+    width: 100%;
+    height: 130px;
+}
+.p-head img{
+    height: 100px;
+    margin-left: 130px;
+}
+.bar{
+    width: 100%;
+    height: 35px;
+}
+.com-list3{
+    width: 400px;
+    height: 500px;
+    margin-left: 15px;
+}
+.com-list3 li{
+    font-size: 12px;
+    width: 170px;
+    height: 240px;
+    margin-left: 10px;
+    float: left;
+}
+.b-top1{
+    width: 170px;
+    height: 170px;
+}
+.b-top1 img{
+    width: 170px;
+    height: 170px;
+}
+.b-bottom1 {
+    width: 170px;
+    height: 70px;
+    text-align: center;
+}

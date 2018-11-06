@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="body">
+    <div class="head">
+        <a href="index.html" class="logo"></a>
+        <form>
+            <input type="text" placeholder="请输入关键字查找">
+            <button></button>
+        </form>
+    </div>
+    <div class="nav">
+        <ul id="jsddm">
+            <li>
+                <a href="index.html">学院介绍</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">学校概况</a></li>
+                    <li><a href="#">发展历程</a></li>
+                </ul>
+            </li>
+            <li><a href="#">本科教育</a>
+            </li>
+            <li>
+                <a href="#">专科教育</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">教学单位</a></li>
+                    <li><a href="#">党群行政部门</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">名师风采</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">教师信息网</a></li>
+                    <li><a href="#">高等教育研究所</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">实践教学</a>
+            </li>
+            <li><a href="#">学术科研</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">重点学科</a></li>
+                    <li><a href="#">学位授权点</a></li>
+                    <li><a href="#">科研机构</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">学生工作</a>
+                <ul style="visibility: hidden;">
+                    <li><a href="#">学校地图</a></li>
+                    <li><a href="#">图书馆</a></li>
+                    <li><a href="#">信息门户</a></li>
+                    <li><a href="#">校园网</a></li>
+                    <li><a href="#">交通信息</a></li>
+                    <li><a href="#">超算平台</a></li>
+                    <li><a href="#">智能填表系统</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">继续教育</a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        var timeout= 500;
+        var closetimer= 0;
+        var ddmenuitem= 0;
+        function jsddm_open()
+        {  jsddm_canceltimer();
+            jsddm_close();
+            ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+        function jsddm_close()
+        {  if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+        function jsddm_timer()
+        {  closetimer = window.setTimeout(jsddm_close, timeout);}
+        function jsddm_canceltimer()
+        {  if(closetimer)
+        {  window.clearTimeout(closetimer);
+            closetimer = null;}}
+        $(document).ready(function()
+        {  $('#jsddm > li').bind('mouseover', jsddm_open);
+            $('#jsddm > li').bind('mouseout', jsddm_timer);});
+        document.onclick = jsddm_close;
+    </script>
+    <div class="tab1">
+        <div>
+            <a href="index.html">首页</a>/实践教学/ 相关文档 /
+        </div>
+    </div>
+    <div class="content">
+        <div id="nav" class="left">
+            <h2>实践教学</h2>
+            <ul>
+                <li class="li1">
+                    <a href="index1.html">实验室介绍</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="li1">
+                    <a href="company-profilr.html">实习企业介绍</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="li1">
+                    <a href="#">相关文档</a>
+                </li>
+            </ul>
+        </div>
+        <script>
+
+            $(function(){
+                $('#nav>ul>li').mouseover(function(){
+                    $(this).children('ul').show()
+                })
+                $('#nav>ul>li').mouseout(function(){
+                    $(this).children('ul').hide()
+                })
+            })
+        </script>
+        <div class="right">
+            <h1><i></i>实践教学</h1>
+            <h2>相关文档</h2>
+            <p>更新时间：2016-09-18</p>
+            <div class="htmleaf-container">
+                <div class="demo">
+                    <p style="text-align: left;font-size: 14px">&nbsp;&nbsp;&nbsp;&nbsp;学校注重学生科研实践能力的培养，强调“应用性科研与应用型人才培养并行”。目前有国家示范性软件职业技术学院重点建设专业2个，中央财政支持重点建设专业2个；省级重点建设专业7个。在计算机和信息技术领域积极开展应用性科研，现有软件工程研究所、计算机科学与工程研究所、单片机应用与开发研究所等4个内设研究机构，给学生提供良好的科研环境。
+
+                        　　<br><br>&nbsp;&nbsp;&nbsp;&nbsp;学校给学生配备科研导师，鼓励、引导学生参加各类科技活动，学术交流，参与导师的科研课题，参加全国大学生创新设计大赛，参加行业举办的设计竞赛等等，让学生能够发挥自己的专长，提高创新能力和工程实践能力。学生成立科研协会、机器人社团等，在教师指导下开展前沿科研课题研究，进行产品研发，提高科技创新能力。
+
+                        　　<br><br>&nbsp;&nbsp;&nbsp;&nbsp;为紧跟信息类新经济、新产业快速发展步伐，学校探索创新应用性科研体制机制，建设了科技产业园，不断扩大软件外包、动漫外包、电子商务外包服务能力。近五年来，主持省级教研、科研课题46项，建成国家级精品课程1门，省级精品课程8门，开发了24门以项目化为特征的专业核心课程；编写校本教材68部，公开发表论文165篇，出版专著、教材50部，为行业企业研发并实施科技项目35个。在2007年高职高专院校人才培养工作水平评估中获“优秀”成绩，2012年获省教育厅教学质量管理奖6项。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer1">
+            <div class="left_footer">
+                <div><a href="#">网址导航</a>︱<a href="#">新闻中心</a>︱<a href="#">学院简介</a>︱<a href="#">联系我们</a></div>
+                <p class="p1">
+                    地址：哈尔滨市宾西经济技术开发区大学城9号&nbsp;&nbsp;&nbsp;&nbsp;邮编：150431
+                </p>
+                <p>
+                    电话：0451-58607916 &nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+
+            </div>
+            <div class="right_footer">
+                <p>微信二维码</p>
+                <img src="img/er.jpg" height="126">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
